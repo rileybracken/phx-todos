@@ -8,4 +8,9 @@ defmodule Todos.TodoController do
 
     render conn, "index.json", todos: todos
   end
+
+  def show(conn, %{"id" => id}) do
+    todo = Repo.get!(Todo, id)
+    render(conn, "show.json", todo: todo)
+  end
 end
