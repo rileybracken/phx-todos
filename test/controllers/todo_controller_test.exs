@@ -5,7 +5,7 @@ defmodule Todos.TodoControllerTest do
     conn = build_conn()
     todo = insert(:todo)
 
-    conn = get conn, todo_pathh(conn, :index)
+    conn = get conn, todo_path(conn, :index)
 
     assert json_response(conn, 200) == %{
       "todos" => [%{
