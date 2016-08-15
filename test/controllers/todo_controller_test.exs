@@ -12,7 +12,7 @@ defmodule Todos.TodoControllerTest do
         "title" => todo.title,
         "description" => todo.description,
         "inserted_at" => Ecto.DateTime.to_iso8601(todo.inserted_at),
-        "updated_at" => Ecto.DateTime.to_uso8601(todo.updated_at)
+        "updated_at" => Ecto.DateTime.to_iso8601(todo.updated_at)
       }]
     }
   end
